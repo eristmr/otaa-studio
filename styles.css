@@ -1,0 +1,465 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.page {
+  min-height: 100vh;
+ 
+  position: relative;
+  overflow: hidden;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/OTAA.jpg") center/cover no-repeat;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  z-index: 0;
+}
+
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/OTAAkaranlik.jpg") center/cover no-repeat;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 0;
+}
+
+.page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.manifesto-page::before{
+  background-image: url("images/manifesto.jpg");
+}
+
+
+
+.header {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  float: none;
+  padding-right: 0;
+  font-family: "Science Gothic", sans-serif;
+  font-weight: 500; 
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.header a {
+    text-decoration: none;
+    color: rgb(80, 2, 2);
+     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.menu {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+    gap: 20px;
+}
+.menu a {
+    text-decoration: none;
+    color: black;
+    display: inline-block; 
+  transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .menu a:hover {
+         transform: scale(1.1);
+        color: rgb(139, 0, 0);
+        }
+.profilresmi {
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    box-shadow: 4px 10px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    display: block;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.geributonu {
+    position: fixed; 
+    top: 20px;       
+    left: 30px;      
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1;
+    transition: transform 0.2s ease;
+    transform-origin: top left;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.geributonu:hover {
+    transform: scale(1.1);
+    color: rgb(139, 0, 0);
+}
+
+
+.theme-button{
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 9999;
+  user-select: none;
+}
+
+
+.theme-track{
+  position: relative;
+  width: 24px;
+  height: 70px; 
+}
+
+
+
+.theme-track::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:2px;
+  transform: translateX(-50%);
+  background:#999999; 
+}
+
+
+.cap{
+  position:absolute;
+  left:50%;
+  width:2px;
+  height:16px;
+  transform: translateX(-50%);
+  background: transparent;
+}
+
+.cap-left{ top:0;  }  
+.cap-right{ bottom:0; background:#000000; }
+
+html.dark .cap-right{ background: transparent; }
+html.dark .cap-left{ background: #fff; }
+
+.theme-thumb{
+  position:absolute;
+  left:50%;
+  top: -15px;;
+  width:35px;
+  height:35px;
+  transform: translate(-50%, -50%);
+ transition: top 0.25s ease, transform 0.2s ease;
+   touch-action: none;
+}
+
+.theme-thumb:hover{
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+html.dark .page::before { opacity: 0; }
+html.dark .page::after  { opacity: 1; }
+html.dark .menu a { color: rgb(202, 202, 202); }
+html.dark .menu a:hover { color: rgb(139, 0, 0); transform: scale(1.15); }
+html.dark .theme-thumb{ top: 100%; }
+.manifesto-text{
+  position: absolute;
+
+  top: 70%;
+  right: 20%;
+
+  transform: translateY(-50%);
+
+  max-width: 450px;
+
+  color: rgb(88, 88, 88);
+  
+  
+    
+}
+.manifesto-text h1{
+ font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.manifesto-text p{
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+ 
+ 
+
+
+}
+
+.manifesto-page::before,
+.manifesto-page::after{
+  position: fixed;
+  inset: 0;
+}
+.manifesto-page::before,
+.manifesto-page::after{
+  position: fixed;
+  inset: 0;
+}
+.manifesto-page{
+  overflow: visible;
+}
+
+.works-wrapper{
+  position: relative;
+  display: inline-block;
+}
+
+.works-submenu{
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.works-submenu a{
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.works-submenu a:hover{
+  transform: translateX(5px);
+  color: rgb(139, 0, 0);
+}
+
+.works-wrapper.open .works-submenu{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+html.dark .works-submenu a{
+  color: rgb(202, 202, 202);
+}
+
+
+.manifesto-page::after{
+  background-image: url("images/manifestokaranlik.jpg");
+}
+html.preload *{
+  transition: none !important;
+}
+.grafik-page::before,
+.grafik-page::after{
+  content: none;   
+}
+
+.grafik-page{
+  background-color: #ffffff;
+}
+
+html.dark .grafik-page{
+  background-color: #000000;
+}
+.grafik-gallery{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  column-gap: 10px;
+ row-gap: 40px;   
+column-gap: 10px;
+
+
+  justify-items: center;  
+  align-items: center;    
+
+  padding: 20px;
+  z-index: 10;
+}
+
+.grafik-gallery img{
+  height: 150px; 
+  width: auto;
+  display: block;
+  cursor: pointer;
+
+  transition: transform 0.25s ease;
+}
+.grafik-gallery img:hover{
+  transform: scale(1.2);
+}
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  z-index: 2147483647; 
+}
+
+.lightbox.open{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.lightbox img,
+.lightbox video{
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  display: none;
+}
+
+.lightbox video{
+  background: #000;
+}
+
+
+.lightbox.open{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.enstalasyon-page::before,
+.enstalasyon-page::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: none;
+}
+
+.enstalasyon-page{
+  background-color: #ffffff;
+}
+
+html.dark .enstalasyon-page{
+  background-color: #000000;
+}
+html:not(.dark) .enstalasyon-page::before{
+  background: url("images/manifestoaydinlik.jpg") center / cover no-repeat;
+  opacity: 1;
+}
+html.dark .enstalasyon-page::after{
+  background: url("images/manifestokaranlik2.jpg") center / cover no-repeat;
+  opacity: 1;
+}
+
+
+.enstalasyon-head{
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.enstalasyon-title{
+  font-family: "Science Gothic", sans-serif;
+  font-size: 42px;
+  letter-spacing: 2px;
+  color: #424242;
+}
+
+.enstalasyon-subtitle{
+  margin-top: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #555;
+}
+
+html.dark .enstalasyon-title{ color: #eee; }
+html.dark .enstalasyon-subtitle{ color: #aaa; }
+
+
+.enstalasyon-gallery{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.enstalasyon-gallery img{
+  height: 490px; 
+  width: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.enstalasyon-gallery img:hover{
+  transform: scale(1.16);
+}
+
+.altmetin{
+  position: fixed;
+  bottom: 15px;      
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+  z-index: 5;
+}
+

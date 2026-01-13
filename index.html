@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ara teslim</title>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Poppins:wght@300&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+<script>
+  (function () {
+    try {
+      document.documentElement.classList.add("preload");
+      if (localStorage.getItem("otaaTheme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+      
+      requestAnimationFrame(() => {
+        document.documentElement.classList.remove("preload");
+      });
+    } catch(e) {}
+  })();
+</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+ <div class="header"> 
+      <a href="index.html"> OTAA </a>
+</div>
+
+
+    <div class="theme-button" id="themeButton" aria-label="Theme toggle">
+  <div class="theme-track">
+    <span class="cap cap-left"></span>
+    <span class="cap cap-right"></span>
+    <img class="theme-thumb" src="images/buton.png" alt=""draggable="false">
+  </div>
+</div>
+    <div class="menu">
+        
+      
+
+    <a href="manifesto.html">Manifesto</a>
+    <div class="works-wrapper">
+    <a href="#" id="worksToggle">Works</a>
+
+    <div class="works-submenu">
+      <a href="grafik.html">Grafik</a>
+      <a href="enstalasyon.html">Enstalasyon</a>
+      <a href="atolye.html">Atölye</a>
+    </div>
+  </div>
+    <a href="aboutme.html">About Us</a>
+  </div>
+  
+
+
+
+
+
+<div class="altmetin">
+  <p>made by tamer eris</p>
+</div>
+
+    <script src="a.js"></script>
+</body>
+</html>

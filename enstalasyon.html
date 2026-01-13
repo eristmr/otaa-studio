@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enstalasyon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Poppins:wght@300&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+
+  <script>
+    (function () {
+      try {
+        document.documentElement.classList.add("preload");
+        if (localStorage.getItem("otaaTheme") === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+        requestAnimationFrame(() => {
+          document.documentElement.classList.remove("preload");
+        });
+      } catch(e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="page enstalasyon-page">
+
+    <a href="index.html" class="geributonu">&lt;</a>
+
+    <div class="theme-button" id="themeButton" aria-label="Theme toggle">
+      <div class="theme-track">
+        <span class="cap cap-left"></span>
+        <span class="cap cap-right"></span>
+        <img class="theme-thumb" src="images/buton.png" alt="" draggable="false">
+      </div>
+    </div>
+
+    <div class="header">
+      <a href="index.html">OTAA</a>
+    </div>
+
+    <div class="enstalasyon-head">
+      <h1 class="enstalasyon-title">Enstalasyon</h1>
+      <p class="enstalasyon-subtitle">Yan Köşe</p>
+    </div>
+
+   <div class="enstalasyon-gallery">
+  <img src="./images/7.png" data-video="./videos/7.mp4" alt="Enstalasyon">
+</div>
+
+
+    <div class="altmetin">
+      <p>made by tamer eris</p>
+    </div>
+
+  </div>
+
+  <div class="lightbox" id="lightbox">
+  <img id="lightbox-img" src="" alt="">
+  <video id="lightbox-video" controls playsinline></video>
+</div>
+
+
+  <script src="a.js"></script>
+</body>
+</html>
